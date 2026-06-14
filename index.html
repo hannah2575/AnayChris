@@ -8,154 +8,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      color: #51491D;
-      background: #F6F4E9;
-    }
-
+    body { font-family: 'Jost', sans-serif; font-weight: 300; color: #253220; background: #F6F4E9; }
     .serif { font-family: 'Cormorant Garamond', serif; }
+    .label { font-size: 11px; letter-spacing: 0.20em; text-transform: uppercase; color: #938A65; font-weight: 400; }
 
-    .label {
-      font-size: 11px;
-      letter-spacing: 0.20em;
-      text-transform: uppercase;
-      color: #938A65;
-      font-weight: 400;
-    }
-
-    .vline {
-      width: 1px;
-      background: #938A65;
-      margin: 0 auto;
-    }
-
-    section {
-      padding: 72px 40px;
-      border-bottom: 0.5px solid #E5DDCF;
-      text-align: center;
-    }
-
-    /* NAV */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: #F6F4E9;
-      border-bottom: 0.5px solid #E5DDCF;
-      padding: 18px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: sticky; top: 0; z-index: 100;
+      background: #F6F4E9; border-bottom: 0.5px solid #E5DDCF;
+      padding: 18px 40px; display: flex; justify-content: center; align-items: center; gap: 40px;
     }
-    nav .nav-links {
-      display: flex;
-      gap: 32px;
-    }
-    nav a {
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #938A65;
-      text-decoration: none;
-    }
-    nav a:hover { color: #51491D; }
+    nav a { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #938A65; text-decoration: none; }
+    nav a:hover { color: #253220; }
 
-    /* HERO */
     #hero {
       background-color: #253220;
       background-image: url('hero.jpg');
       background-size: cover;
       background-position: center top;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 80px 40px;
+      display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+      text-align: center; padding: 0 40px 72px;
     }
 
-    /* ITINERARY */
-    .evt-row {
-      padding: 32px 0;
-      border-bottom: 0.5px solid #E5DDCF;
-      text-align: center;
-      max-width: 480px;
-      margin: 0 auto;
-    }
+    section { padding: 72px 40px; border-bottom: 0.5px solid #E5DDCF; text-align: center; }
+
+    .evt-row { padding: 28px 0; border-bottom: 0.5px solid #938A65; text-align: center; max-width: 480px; margin: 0 auto; }
     .evt-row:last-child { border-bottom: none; }
 
-    /* HOSPEDAJE */
-    .hsp-row {
-      padding: 32px 0;
-      border-bottom: 0.5px solid #E5DDCF;
-      text-align: center;
-      max-width: 480px;
-      margin: 0 auto;
-    }
+    .hsp-row { padding: 28px 0; border-bottom: 0.5px solid #938A65; text-align: center; max-width: 480px; margin: 0 auto; }
     .hsp-row:last-child { border-bottom: none; }
-    .hsp-row a {
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #51491D;
-      text-decoration: none;
-      border-bottom: 0.5px solid #938A65;
-      padding-bottom: 2px;
-    }
+    .hsp-row a { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #253220; text-decoration: none; border-bottom: 0.5px solid #938A65; padding-bottom: 2px; }
 
-    /* DRESS CODE */
-    .dc-pill {
-      display: inline-block;
-      border: 0.5px solid #938A65;
-      border-radius: 20px;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #51491D;
-      padding: 6px 14px;
-      margin: 4px;
-    }
-    .dc-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 28px;
-      max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .dc-card {
-      border: 0.5px solid #E5DDCF;
-      padding: 24px;
-      text-align: left;
-    }
+    .dc-pill { display: inline-block; border: 0.5px solid #938A65; border-radius: 20px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #253220; padding: 6px 14px; margin: 4px; }
+    .dc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .dc-card { border: 0.5px solid #E5DDCF; padding: 24px; text-align: left; }
 
-    /* LOCATION */
-    .map-placeholder {
-      background: #E5DDCF;
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-
-    /* SWATCH */
-    .swatch {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      margin: 0 auto 8px;
-    }
-
-    /* MOBILE */
     @media (max-width: 600px) {
-      nav .nav-links { gap: 16px; }
-      #hero { padding: 60px 24px; }
+      nav { gap: 16px; padding: 18px 20px; }
+      nav a { font-size: 10px; }
+      #hero { padding: 0 24px 60px; }
       section { padding: 56px 24px; }
       .dc-grid { grid-template-columns: 1fr; }
     }
@@ -164,125 +55,113 @@
 <body>
 
   <nav>
-    <span class="label" style="color:#51491D">Ana & Chris</span>
-    <div class="nav-links">
-      <a href="#itinerario">Itinerario</a>
-      <a href="#ubicacion">Ubicación</a>
-      <a href="#hospedaje">Hospedaje</a>
-      <a href="#dresscode">Dress code</a>
-    </div>
+    <a href="#itinerario">Itinerario</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#hospedaje">Hospedaje</a>
+    <a href="#dresscode">Dress code</a>
+    <a href="#rsvp">RSVP</a>
   </nav>
 
   <div id="hero">
-    <p class="label" style="color:#9BAA7A;letter-spacing:0.28em;margin-bottom:72px;opacity:0.8">Puerto Vallarta · Jalisco</p>
-    <p class="serif" style="font-size:72px;font-weight:300;color:#F6F4E9;line-height:1;letter-spacing:0.01em">Ana</p>
-    <p class="serif" style="font-size:36px;font-style:italic;font-weight:300;color:#9BAA7A;line-height:1;margin:18px 0">&</p>
-    <p class="serif" style="font-size:72px;font-weight:300;color:#F6F4E9;line-height:1;letter-spacing:0.01em;margin-bottom:72px">Chris</p>
-    <div class="vline" style="height:56px;margin-bottom:28px;background:#9BAA7A;opacity:0.6"></div>
-    <p class="label" style="color:#9BAA7A;letter-spacing:0.26em;opacity:0.8">XXVII · II · MMXXVII</p>
+    <p class="serif" style="font-size:72px;font-weight:300;color:#E5DDCF;line-height:1;letter-spacing:0.01em">Ana</p>
+    <p class="serif" style="font-size:36px;font-style:italic;font-weight:300;color:#E5DDCF;line-height:1;margin:12px 0">&</p>
+    <p class="serif" style="font-size:72px;font-weight:300;color:#E5DDCF;line-height:1;letter-spacing:0.01em">Chris</p>
+    <div style="width:1px;height:36px;background:#E5DDCF;margin:28px auto"></div>
+    <p class="label" style="color:#E5DDCF;letter-spacing:0.22em;margin-bottom:10px">27 · 02 · 2027</p>
+    <p class="label" style="color:#E5DDCF;letter-spacing:0.18em">Litibú House · Punta Mita</p>
   </div>
 
   <section style="background:#F6F4E9">
-    <p class="label" style="margin-bottom:20px">La boda</p>
-    <div class="vline" style="height:48px;margin-bottom:36px"></div>
-    <p class="serif" style="font-size:22px;font-style:italic;font-weight:300;color:#51491D;max-width:380px;margin:0 auto 44px;line-height:1.8">Nos encantaría tenerte con nosotros en este día tan especial.</p>
-    <div style="border:0.5px solid #938A65;padding:22px 36px;display:inline-block">
-      <p class="serif" style="font-size:28px;font-weight:300;color:#51491D;letter-spacing:0.1em;margin-bottom:6px">XXVII · II · MMXXVII</p>
-      <p class="label" style="color:#938A65;letter-spacing:0.2em">Puerto Vallarta · Jalisco · México</p>
+    <p class="label" style="color:#938A65;margin-bottom:20px">La boda</p>
+    <div style="width:1px;height:48px;background:#938A65;margin:0 auto 36px"></div>
+    <p class="serif" style="font-size:22px;font-style:italic;font-weight:300;color:#253220;max-width:380px;margin:0 auto 44px;line-height:1.8">Nos encantaría tenerte con nosotros en este día tan especial.</p>
+    <div style="border:0.5px solid #938A65;padding:28px 40px;display:inline-block">
+      <p class="serif" style="font-size:28px;font-weight:300;color:#253220;letter-spacing:0.06em;margin-bottom:10px">27 · 02 · 2027</p>
+      <p class="label" style="color:#938A65;letter-spacing:0.2em">Litibú House · Punta Mita · Nayarit</p>
     </div>
   </section>
 
   <section id="itinerario" style="background:#EDE9DA">
-    <p class="label" style="margin-bottom:16px">El día</p>
-    <p class="serif" style="font-size:44px;font-weight:300;color:#51491D">Itinerario</p>
-    <div class="vline" style="height:48px;margin:20px auto 28px"></div>
-    <div style="display:inline-flex;align-items:center;gap:14px;margin-bottom:8px">
-      <div style="width:40px;height:40px;border-radius:50%;background:#E5DDCF;display:flex;align-items:center;justify-content:center;flex-shrink:0">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#938A65" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-      </div>
-      <div style="text-align:left">
-        <p class="serif" style="font-size:20px;font-style:italic;font-weight:300;color:#51491D">El gran día</p>
-        <p class="label" style="color:#938A65;margin-top:2px">Sábado 27 · Febrero 2027</p>
-      </div>
-    </div>
+    <p class="label" style="color:#938A65;margin-bottom:16px">El día</p>
+    <p class="serif" style="font-size:44px;font-weight:300;color:#253220">Itinerario</p>
+    <div style="width:1px;height:48px;background:#938A65;margin:20px auto 32px"></div>
+    <p class="serif" style="font-size:32px;font-style:italic;font-weight:300;color:#253220;margin-bottom:8px">El gran día</p>
+    <p class="label" style="color:#253220;letter-spacing:0.2em;margin-bottom:8px">Sábado 27 · Febrero 2027</p>
+    <div style="width:40px;height:0.5px;background:#938A65;margin:20px auto 0"></div>
     <div class="evt-row">
       <p class="label" style="color:#938A65;margin-bottom:10px">3:00 pm</p>
-      <p class="serif" style="font-size:22px;font-weight:300;color:#51491D;margin-bottom:4px">Ceremonia</p>
-      <p class="label" style="color:#938A65;margin-bottom:10px">Playa del venue</p>
-      <p class="serif" style="font-size:14px;font-style:italic;color:#938A65;line-height:1.7">Con el mar de fondo y la brisa del Pacífico como testigos.</p>
+      <p class="serif" style="font-size:22px;font-weight:300;color:#253220;margin-bottom:4px">Ceremonia</p>
+      <p class="label" style="color:#938A65;margin-bottom:10px">Litibú House</p>
+      <p class="serif" style="font-size:15px;font-style:italic;color:#253220;line-height:1.7">Con el mar de fondo y la brisa del Pacífico como testigos.</p>
     </div>
     <div class="evt-row">
       <p class="label" style="color:#938A65;margin-bottom:10px">4:30 pm</p>
-      <p class="serif" style="font-size:22px;font-weight:300;color:#51491D;margin-bottom:4px">Cocktail</p>
+      <p class="serif" style="font-size:22px;font-weight:300;color:#253220;margin-bottom:4px">Cocktail</p>
       <p class="label" style="color:#938A65;margin-bottom:10px">Terraza del venue</p>
-      <p class="serif" style="font-size:14px;font-style:italic;color:#938A65;line-height:1.7">Música en vivo, cocteles y el atardecer de Vallarta.</p>
+      <p class="serif" style="font-size:15px;font-style:italic;color:#253220;line-height:1.7">Música en vivo, cocteles y el atardecer de Vallarta.</p>
     </div>
     <div class="evt-row">
       <p class="label" style="color:#938A65;margin-bottom:10px">7:00 pm</p>
-      <p class="serif" style="font-size:22px;font-weight:300;color:#51491D;margin-bottom:4px">Recepción & cena</p>
+      <p class="serif" style="font-size:22px;font-weight:300;color:#253220;margin-bottom:4px">Recepción & cena</p>
       <p class="label" style="color:#938A65;margin-bottom:10px">Salón principal</p>
-      <p class="serif" style="font-size:14px;font-style:italic;color:#938A65;line-height:1.7">Brindis, baile y celebración hasta que el cuerpo aguante.</p>
+      <p class="serif" style="font-size:15px;font-style:italic;color:#253220;line-height:1.7">Brindis, baile y celebración hasta que el cuerpo aguante.</p>
     </div>
     <div class="evt-row">
       <p class="label" style="color:#938A65;margin-bottom:10px">11:00 pm</p>
-      <p class="serif" style="font-size:22px;font-weight:300;color:#51491D;margin-bottom:4px">Fiesta</p>
-      <p class="serif" style="font-size:14px;font-style:italic;color:#938A65;line-height:1.7">La noche sigue — y nosotros también.</p>
+      <p class="serif" style="font-size:22px;font-weight:300;color:#253220;margin-bottom:4px">Fiesta</p>
+      <p class="serif" style="font-size:15px;font-style:italic;color:#253220;line-height:1.7">La noche sigue — y nosotros también.</p>
     </div>
   </section>
 
   <section id="ubicacion" style="background:#F6F4E9">
-    <p class="label" style="margin-bottom:16px">¿Cómo llegar?</p>
-    <p class="serif" style="font-size:44px;font-weight:300;color:#51491D">Ubicación</p>
-    <div class="vline" style="height:48px;margin:20px auto 36px"></div>
+    <p class="label" style="color:#938A65;margin-bottom:16px">¿Cómo llegar?</p>
+    <p class="serif" style="font-size:44px;font-weight:300;color:#253220">Ubicación</p>
+    <div style="width:1px;height:48px;background:#938A65;margin:20px auto 36px"></div>
     <div style="border:0.5px solid #E5DDCF;padding:32px;background:#EDE9DA;max-width:560px;margin:0 auto">
-      <p class="serif" style="font-size:26px;font-style:italic;font-weight:300;color:#51491D;margin-bottom:6px">Litibú House</p>
-      <p class="label" style="color:#938A65;margin-bottom:24px;letter-spacing:0.2em">Litibú · Nayarit · México</p>
-      <p class="serif" style="font-size:16px;font-style:italic;color:#938A65;margin-bottom:20px">Litibú House · Litibú, Nayarit</p>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1!2d-105.4807311!3d20.8064044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8421156e8dbc34cd%3A0x7acadcb86dc469db!2sLitib%C3%BA%20House!5e0!3m2!1ses!2smx!4v1"
-        width="100%" height="200" style="border:none;display:block;margin-bottom:24px" allowfullscreen="" loading="lazy">
+      <p class="serif" style="font-size:26px;font-weight:300;color:#253220;margin-bottom:4px">Litibú House</p>
+      <p class="label" style="color:#938A65;margin-bottom:24px;letter-spacing:0.2em">Punta Mita</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1!2d-105.4807311!3d20.8064044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8421156e8dbc34cd%3A0x7acadcb86dc469db!2sLitib%C3%BA%20House!5e0!3m2!1ses!2smx!4v1"
+        width="100%" height="200" style="border:0.5px solid #E5DDCF;display:block;margin-bottom:24px" allowfullscreen="" loading="lazy">
       </iframe>
-      <a href="https://maps.app.goo.gl/Z6U7HuzAHyPDLn1r7" target="_blank" class="label" style="color:#51491D;text-decoration:none;border-bottom:0.5px solid #938A65;padding-bottom:2px;letter-spacing:0.18em">
-        Abrir en Google Maps →
-      </a>
+      <a href="https://maps.app.goo.gl/Z6U7HuzAHyPDLn1r7" target="_blank" class="label" style="color:#253220;text-decoration:none;border-bottom:0.5px solid #938A65;padding-bottom:2px;letter-spacing:0.18em">Abrir en Google Maps →</a>
     </div>
   </section>
 
   <section id="hospedaje" style="background:#EDE9DA">
-    <p class="label" style="margin-bottom:16px">Dónde quedarse</p>
-    <p class="serif" style="font-size:44px;font-weight:300;color:#51491D">Hospedaje</p>
-    <div class="vline" style="height:48px;margin:20px auto"></div>
+    <p class="label" style="color:#938A65;margin-bottom:16px">Dónde quedarse</p>
+    <p class="serif" style="font-size:44px;font-weight:300;color:#253220">Hospedaje</p>
+    <div style="width:1px;height:48px;background:#938A65;margin:20px auto"></div>
     <div class="hsp-row">
       <p class="label" style="color:#938A65;margin-bottom:8px">Hotel boutique · Recomendado</p>
-      <p class="serif" style="font-size:26px;font-weight:300;color:#51491D;margin-bottom:10px">Hotel [nombre]</p>
+      <p class="serif" style="font-size:26px;font-weight:300;color:#253220;margin-bottom:8px">Hotel [nombre]</p>
       <p style="font-size:14px;color:#938A65;line-height:1.7;margin-bottom:14px">A 5 minutos del venue. Bloque de habitaciones reservado para invitados.</p>
       <a href="#">Ver disponibilidad →</a>
     </div>
     <div class="hsp-row">
       <p class="label" style="color:#938A65;margin-bottom:8px">Resort · Todo incluido</p>
-      <p class="serif" style="font-size:26px;font-weight:300;color:#51491D;margin-bottom:10px">Resort [nombre]</p>
+      <p class="serif" style="font-size:26px;font-weight:300;color:#253220;margin-bottom:8px">Resort [nombre]</p>
       <p style="font-size:14px;color:#938A65;line-height:1.7;margin-bottom:14px">A 15 minutos. Playa privada y precio especial para invitados.</p>
       <a href="#">Ver disponibilidad →</a>
     </div>
     <div class="hsp-row">
       <p class="label" style="color:#938A65;margin-bottom:8px">Zona hotelera · Económico</p>
-      <p class="serif" style="font-size:26px;font-weight:300;color:#51491D;margin-bottom:10px">Hotel [nombre]</p>
+      <p class="serif" style="font-size:26px;font-weight:300;color:#253220;margin-bottom:8px">Hotel [nombre]</p>
       <p style="font-size:14px;color:#938A65;line-height:1.7;margin-bottom:14px">Bien ubicado, fácil acceso al venue desde la zona hotelera.</p>
       <a href="#">Ver disponibilidad →</a>
     </div>
   </section>
 
   <section id="dresscode" style="background:#F6F4E9">
-    <p class="label" style="margin-bottom:16px">Cómo vestirse</p>
-    <p class="serif" style="font-size:44px;font-weight:300;color:#51491D">Dress code</p>
-    <div class="vline" style="height:48px;margin:20px auto 32px"></div>
-    <p class="serif" style="font-size:24px;font-style:italic;font-weight:300;color:#51491D;margin-bottom:16px">Boho elegante · Playa</p>
+    <p class="label" style="color:#938A65;margin-bottom:16px">Cómo vestirse</p>
+    <p class="serif" style="font-size:44px;font-weight:300;color:#253220">Dress code</p>
+    <div style="width:1px;height:48px;background:#938A65;margin:20px auto 32px"></div>
+    <p class="serif" style="font-size:24px;font-style:italic;font-weight:300;color:#253220;margin-bottom:16px">Boho elegante · Playa</p>
     <p style="font-size:14px;color:#938A65;max-width:400px;margin:0 auto 32px;line-height:1.8">Telas ligeras y naturales. Siluetas fluidas. Cómodo y hermoso — estamos en la playa.</p>
     <div style="display:flex;justify-content:center;gap:20px;margin-bottom:32px">
-      <div><div class="swatch" style="background:#F6F4E9;border:1.5px solid #E5DDCF"></div><p style="font-size:10px;color:#938A65;letter-spacing:0.1em;text-transform:uppercase">Arena</p></div>
-      <div><div class="swatch" style="background:#E5DDCF;border:1.5px solid #D4CCBC"></div><p style="font-size:10px;color:#938A65;letter-spacing:0.1em;text-transform:uppercase">Lino</p></div>
-      <div><div class="swatch" style="background:#938A65"></div><p style="font-size:10px;color:#938A65;letter-spacing:0.1em;text-transform:uppercase">Terracota</p></div>
-      <div><div class="swatch" style="background:#51491D"></div><p style="font-size:10px;color:#938A65;letter-spacing:0.1em;text-transform:uppercase">Olivo</p></div>
+      <div><div style="width:36px;height:36px;border-radius:50%;background:#F6F4E9;border:1.5px solid #E5DDCF;margin:0 auto 8px"></div><p style="font-size:10px;color:#938A65;letter-spacing:0.1em;text-transform:uppercase">Arena</p></div>
+      <div><div style="width:36px;height:36px;border-radius:50%;background:#E5DDCF;border:1.5px solid #D4CCBC;margin:0 auto 8px"></div><p style="font-size:10px;color:#938A65;letter-spacing:0.1em;text-transform:uppercase">Lino</p></div>
+      <div><div style="width:36px;height:36px;border-radius:50%;background:#938A65;margin:0 auto 8px"></div><p style="font-size:10px;color:#938A65;letter-spacing:0.1em;text-transform:uppercase">Terracota</p></div>
+      <div><div style="width:36px;height:36px;border-radius:50%;background:#253220;margin:0 auto 8px"></div><p style="font-size:10px;color:#938A65;letter-spacing:0.1em;text-transform:uppercase">Verde</p></div>
     </div>
     <div style="margin-bottom:28px">
       <span class="dc-pill">Lino & algodón</span>
@@ -293,21 +172,34 @@
     </div>
     <div class="dc-grid">
       <div class="dc-card">
-        <p class="label" style="margin-bottom:14px">Ellas</p>
+        <p class="label" style="margin-bottom:14px;color:#938A65">Ellas</p>
         <p style="font-size:14px;color:#938A65;line-height:1.9">Vestidos midi o largos<br>Palazzos · Jumpsuits fluidos<br>Sandalias o cuñas<br>Accesorios naturales</p>
       </div>
       <div class="dc-card">
-        <p class="label" style="margin-bottom:14px">Ellos</p>
+        <p class="label" style="margin-bottom:14px;color:#938A65">Ellos</p>
         <p style="font-size:14px;color:#938A65;line-height:1.9">Lino claro o terracota<br>Guayabera elegante<br>Pantalón de vestir<br>Sin corbata necesaria</p>
       </div>
     </div>
   </section>
 
-  <footer style="background:#2A3828;padding:72px 40px;text-align:center">
-    <div class="vline" style="height:48px;margin-bottom:32px;opacity:0.4"></div>
-    <p class="serif" style="font-size:28px;font-style:italic;font-weight:300;color:#F6F4E9;margin-bottom:12px">Ana & Chris</p>
-    <p class="label" style="color:#9BAA7A;letter-spacing:0.22em;margin-bottom:24px">XXVII · II · MMXXVII · Puerto Vallarta</p>
-    <p class="serif" style="font-size:16px;font-style:italic;font-weight:300;color:#F6F4E9;opacity:0.5">Con todo nuestro amor, gracias por acompañarnos.</p>
+  <section id="rsvp" style="background:#EDE9DA">
+    <p class="label" style="color:#938A65;margin-bottom:16px">Confirmación</p>
+    <p class="serif" style="font-size:44px;font-weight:300;color:#253220">RSVP</p>
+    <div style="width:1px;height:48px;background:#938A65;margin:20px auto 32px"></div>
+    <p class="serif" style="font-size:20px;font-style:italic;font-weight:300;color:#253220;max-width:380px;margin:0 auto 40px;line-height:1.8">Por favor confirma tu asistencia antes del 27 de enero de 2027.</p>
+    <div style="max-width:480px;margin:0 auto">
+      <input type="text" placeholder="Tu nombre completo" style="width:100%;padding:14px 16px;border:0.5px solid #938A65;background:#F6F4E9;font-family:'Jost',sans-serif;font-size:14px;color:#253220;margin-bottom:12px;outline:none">
+      <input type="number" placeholder="Número de personas" style="width:100%;padding:14px 16px;border:0.5px solid #938A65;background:#F6F4E9;font-family:'Jost',sans-serif;font-size:14px;color:#253220;margin-bottom:12px;outline:none">
+      <textarea placeholder="¿Alguna restricción alimenticia?" rows="3" style="width:100%;padding:14px 16px;border:0.5px solid #938A65;background:#F6F4E9;font-family:'Jost',sans-serif;font-size:14px;color:#253220;margin-bottom:24px;outline:none;resize:none"></textarea>
+      <button style="border:0.5px solid #253220;background:transparent;color:#253220;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;padding:14px 40px;cursor:pointer;width:100%">Confirmar asistencia</button>
+    </div>
+  </section>
+
+  <footer style="background:#253220;padding:72px 40px;text-align:center">
+    <div style="width:1px;height:48px;background:#E5DDCF;margin:0 auto 32px;opacity:0.3"></div>
+    <p class="serif" style="font-size:28px;font-style:italic;font-weight:300;color:#E5DDCF;margin-bottom:12px">Ana & Chris</p>
+    <p class="label" style="color:#938A65;letter-spacing:0.22em;margin-bottom:24px">27 · 02 · 2027 · Litibú House · Punta Mita</p>
+    <p class="serif" style="font-size:16px;font-style:italic;font-weight:300;color:#E5DDCF;opacity:0.5">Con todo nuestro amor, gracias por acompañarnos.</p>
   </footer>
 
 </body>
